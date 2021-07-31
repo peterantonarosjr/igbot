@@ -208,14 +208,10 @@ def upload_photo(
             time.sleep(configure_timeout)
         if is_sidecar:
             configuration = self.configure_photo(upload_id, photo, caption, usertags, is_sidecar=True)
-            if options.get("rename"):
-                os.rename(photo, "{fname}.REMOVE_ME".format(fname=photo))
             return configuration
         elif self.configure_photo(upload_id, photo, caption, usertags, is_sidecar=False):
             media = self.last_json.get("media")
             self.expose()
-            if options.get("rename"):
-                os.rename(photo, "{fname}.REMOVE_ME".format(fname=photo))
             return media
     return False
 
