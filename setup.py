@@ -10,7 +10,6 @@ setup(
     name="instabot",
     version="0.117.0",
     description="Instagram bot scripts for promotion and API python wrapper.",
-    long_description=long_description,
     author="Daniil Okhlopkov, Evgeny Kemerov",
     author_email="danokhlopkov@gmail.com, eskemerov@gmail.com",
     license="Apache Software License 2.0",
